@@ -11,7 +11,11 @@ import UIKit
 class MasterViewController: UITableViewController {
 
     var detailViewController: DetailViewController? = nil
-    var objects = [Any]()
+    var objects: movieDataModel? {
+        didSet {
+            tableView.reloadData()
+        }
+    }
     let dataController = MovieDataController()
 
 
@@ -23,6 +27,11 @@ class MasterViewController: UITableViewController {
             let controllers = split.viewControllers
             detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
         }
+        
+        dataController.getRebootData(completion: { returnedToData in
+            self.objects = returnedToData
+            
+        })
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -30,12 +39,12 @@ class MasterViewController: UITableViewController {
         super.viewWillAppear(animated)
     }
 
-    @objc
-    func insertNewObject(_ sender: Any) {
-        objects.insert(NSDate(), at: 0)
-        let indexPath = IndexPath(row: 0, section: 0)
-        tableView.insertRows(at: [indexPath], with: .automatic)
-    }
+//    @objc
+//    func insertNewObject(_ sender: Any) {
+//        objects.insert(NSDate(), at: 0)
+//        let indexPath = IndexPath(row: 0, section: 0)
+//        tableView.insertRows(at: [indexPath], with: .automatic)
+//    }
 
     // MARK: - Segues
 /*

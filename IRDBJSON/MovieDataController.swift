@@ -26,6 +26,8 @@ class MovieDataController: NSObject {
                 let decoder = JSONDecoder()
                 let mediaData = try decoder.decode(movieDataModel.self, from: data)
                 
+                print(mediaData.franchise[0].franchiseName)
+                
                 self.dataModel = mediaData
                     
             } catch let err{

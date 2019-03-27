@@ -39,22 +39,9 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="afk-0X-Kp6">
                                         <rect key="frame" x="5" y="5" width="126" height="190"/>
-                                        <subviews>
-                                            <wkWebView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hQx-Rr-oDy">
-                                                <rect key="frame" x="3" y="3" width="120" height="184"/>
-                                                <wkWebViewConfiguration key="configuration">
-                                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                                    <wkPreferences key="preferences"/>
-                                                </wkWebViewConfiguration>
-                                            </wkWebView>
-                                        </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="hQx-Rr-oDy" firstAttribute="top" secondItem="afk-0X-Kp6" secondAttribute="top" constant="3" id="3Pm-uP-eg9"/>
-                                            <constraint firstAttribute="bottom" secondItem="hQx-Rr-oDy" secondAttribute="bottom" constant="3" id="HdK-Jz-gCb"/>
-                                            <constraint firstItem="hQx-Rr-oDy" firstAttribute="leading" secondItem="afk-0X-Kp6" secondAttribute="leading" constant="3" id="d8X-fY-BNz"/>
                                             <constraint firstAttribute="width" constant="126" id="jaU-Vv-sDe"/>
-                                            <constraint firstAttribute="trailing" secondItem="hQx-Rr-oDy" secondAttribute="trailing" constant="3" id="vTJ-3M-Eed"/>
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="IsY-Kj-pG3">
